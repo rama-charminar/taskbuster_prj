@@ -1,26 +1,37 @@
-{% extends 'basemaster/base.htm' %}
-{% block pagetitle %}Tumblelog{% endblock %}
-
-{% block title %}My List Page HeadLine{% endblock %}
-
-{% block primary %}
-
-{% for object in latest %}
-
-	<h2>{{ object.title }}</h2>
-
-
-
-	<p>{{ object.pub_date }}</p>
-
-	 {{ object.body_html|truncatewords_html:"20"|safe }}
-
-	<p>tags: {% for tag in object.get_tags%}<a href="/blog/tags/{{tag.name|slugify}}/">{{tag}}</a>{% endfor %}</p>
-
-	<p><a href="{{object.get_absolute_url}}">read more</a></p>
-
-
-
-{% endfor %}
-
-{% endblock %}
+{% extends 'basemaster/masterstyle.html' %}
+    {% block contententry %}
+{% load staticfiles %}
+<table  cellpadding='5' cellspacing='5' width='95%'>
+					<tr>
+						<td>
+						<h2>Login Screen </h2>
+						</td>
+					</tr>
+					<tr>
+					<td><hr/></td>
+					</tr>
+					
+					
+					<tr>
+						<td>
+							<table>
+								<tr>
+								<td>User Name</td><td><input type="text" name="user"></td>
+								</tr>
+								<tr>
+								<td>Password</td><td><input type="password" name="pwd"></td>
+								</tr>
+								<tr>
+								<td></td><td><input type="submit" value="Search"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+					<td><hr/></td>
+					</tr>
+				</table>
+	{% endblock %}
+        
+    
+    

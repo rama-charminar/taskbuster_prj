@@ -7,7 +7,6 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" type="text/css" href="{% static 'tooplate_style.css' %}" />
-
 </head>
 <body> 
 
@@ -46,13 +45,14 @@
 </div> <!-- end of header_wrapper -->
 <div id="tooplate_main">
     
- <div id="tooplate_content">        
-    
+ <div  align="center">        
+    {% block contententry %}{% endblock %}
 </div>
 
     <div class="cleaner"></div>  
 
 <div id="tooplate_footer_wrapper">
+
 
      <div id="tooplate_footer">
     
@@ -61,6 +61,6 @@
     </div> <!-- end of tooplate_footer -->
 
 </div> 
-    
+    </div>
 </body>
 </html>
